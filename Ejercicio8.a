@@ -1,0 +1,94 @@
+public class Forma {
+
+    String nombre;
+    double posicionX, double posicionY;
+    String color;
+    double calcularArea( )
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public double getPosicionX() {
+        return posicionX;
+    }
+
+    public double getPosicionY() {
+        return posicionY;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setPosicionX(double posicionX) {
+        this.posicionX = posicionX;
+    }
+
+    public void setPosicionY(double posicionY) {
+        this.posicionY = posicionY;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+    
+}
+public class Triangulo {
+ 
+    private double base;
+    private double altura;
+    
+    public Triangulo (double base, double altura);
+    this.base = base;
+    this.altura=altura;
+    
+    
+    public double calcularArea ()
+            return (base * altura)/2;
+}
+public class Cuadrado {
+
+    private double base;
+    private double altura;
+    private double lado;
+    
+    public Triangulo (double base, double altura, double lado);
+    
+    this.base = base;
+    this.altura=altura;
+    this.lado=lado;
+    
+    public double calcularArea ()
+            return lado * lado
+    public double calcularPerimetro ()
+            return 4*lado;  
+}
+public class ClaseMain {
+   public static void main (String [] args) {
+     Triagulo = new triangulo (5,3);
+     System.out.println ("Area del Triangulo" + triangulo.calcularArea());
+     
+     Cuadrado = new cuadrado (4);
+     System.out.println ("Area del cuadrado" + cuadrado.calcularArea());
+     System.out.println ("Perimetro del cuadrado" + cuadrado.calcularperimetro());
+       
+   }
+   object [] formas = new Object [4];
+   Forma [0] = new Cuadrado [4]
+   Forma [1] = new Cuadrado [4]
+   Forma [2]= new Rectangulo (3,6)
+   Forma [3] = new rectangulo (4,4)
+   
+   double sumaAreas = 0;
+   double cantidad Cuadrados = 0;
+   
+   for (Object form = formas)
+   if (forma instanceof cuadrado)
+   sumaAreas += cuadrado.calcularArea ();
+   }
+}
