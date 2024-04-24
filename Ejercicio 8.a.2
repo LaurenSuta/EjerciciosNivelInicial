@@ -1,0 +1,30 @@
+public class Empleado {
+        
+string nombre JoseRamirez
+string dni 
+int edad 26
+boolean casado
+double salario 2.000
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+public void clasifica ()
+        if (edad <= 21){
+    System.out.println (nombre + "es Principiante")
+} else if (edad >=22 && edad <=35){
+    System.out.println (nombre + "es Intermedio")
+} else if (edad > 35){
+    System.out.println (nombre + "es Senior")
+}
+public void toString (){
+    return "Empleado" + nombre + "/nSalario" + salario;
+}
+public void subirSalario(int porcentajeAumento){
+double aumento = salario *(porcentajeAumento / 100);
+salario + aumento
+        System.out.println ("El salario de" + nombre + "ha sido aumentado en" + porcentajeAumento + "%");
+    System.out.println ("Numero salario:" + salario);
+}
+}
