@@ -1,0 +1,118 @@
+public class Forma {
+
+    private String nombre;
+    private double posicionX;
+    private double posicionY;
+    private String color;
+    
+    public Forma(String nombre, double posicionX, double posicionY, String color) {
+        this.nombre = nombre;
+        this.posicionX = posicionX;
+        this.posicionY = posicionY;
+        this.color = color;
+    }
+    
+    private double calcularArea( );
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public double getPosicionX() {
+        return posicionX;
+    }
+
+    public double getPosicionY() {
+        return posicionY;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public void setPosicionX(double posicionX) {
+        this.posicionX = posicionX;
+    }
+
+    public void setPosicionY(double posicionY) {
+        this.posicionY = posicionY;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+    
+}
+public class Triangulo extends Forma {
+ 
+    private double base;
+    private double altura;
+    
+     public Triangulo (String nombre, double posicionX, double posicionY, String color, double base, double altura) {
+        this.base = base;
+        this.altura = altura;
+    }
+    public double calcularArea() {
+        return (base * altura) / 2;
+    }
+    
+}
+public class Cuadrado extends Forma {
+ 
+    private double lado;
+    
+    public Cuadrado (String nombre, double posicionX, double posicionY, String color, double base, double altura) {
+   
+        this.lado = lado;
+    }
+    
+    public double calcularArea () {
+            return lado * lado
+                    }
+    public double calcularPerimetro () {
+            return 4*lado;  
+}
+public class ClaseMain {
+   public static void main (String [] args) {
+     
+     Triangulo = new triangulo (5,3);
+     System.out.println ("Area del Triangulo" + triangulo.calcularArea());
+     
+     Cuadrado = new cuadrado (4);
+     System.out.println ("Area del cuadrado" + cuadrado.calcularArea());
+     System.out.println ("Perimetro del cuadrado" + cuadrado.calcularperimetro());
+       
+   }
+   
+        Cuadrado cuadrado1 = new Cuadrado("Cuadrado 1", 0, 0, "Rojo", 4);
+        Cuadrado cuadrado2 = new Cuadrado("Cuadrado 2", 0, 0, "Azul", 5);
+        Rectangulo rectangulo1 = new Rectangulo("Rectángulo 1", 0, 0, "Verde", 3, 6);
+        Rectangulo rectangulo2 = new Rectangulo("Rectángulo 2", 0, 0, "Amarillo", 7, 2);
+        
+        List<Forma> formas = new ArrayList();
+        formas.add(cuadrado1);
+        formas.add(cuadrado2);
+        formas.add(rectangulo1);
+        formas.add(rectangulo2);
+        
+        
+        double sumaAreas = 0;
+        for (Forma forma : formas) {
+            sumaAreas += forma.calcularArea();
+        System.out.println ("La suma de las areas de todas las formas del array" + sumaAreas );
+        
+        int numCuadrados = 0;
+        double sumaAreasCuadrados = 0;
+        for (Forma forma : formas) {
+            if (forma instanceof Cuadrado) {
+                sumaAreasCuadrados += forma.calcularArea();
+                numCuadrados++;
+            }
+        }
+        double mediaAreasCuadrados = sumaAreasCuadrados / numCuadrados;
+        System.out.println ("La media de las areas de solo los cuadrados que hay en el array" + mediaAreasCuadrados );
+      
