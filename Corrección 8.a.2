@@ -1,0 +1,68 @@
+public class Empleado {
+        
+private string nombre JoseRamirez
+private string dni 
+private int edad 26
+private boolean casado
+private double salario 2.000
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+public void clasifica ()
+        if (edad <= 21){
+    System.out.println (nombre + "es Principiante")
+} else if (edad >=22 && edad <=35){
+    System.out.println (nombre + "es Intermedio")
+} else if (edad > 35){
+    System.out.println (nombre + "es Senior")
+}
+public void toString (){
+    return "Empleado" + nombre + "/nSalario" + salario;
+}
+public void subirSalario(int porcentajeAumento){
+double aumento = salario *(porcentajeAumento / 100);
+salario + aumento
+        System.out.println ("El salario de" + nombre + "ha sido aumentado en" + porcentajeAumento + "%");
+    System.out.println ("Numero salario:" + salario);
+}
+}
+public class Programador extends Empleado {
+
+    private int lineasDeCodigoPorHora;
+    private String lenguajeDominante;
+
+    public int getLineasDeCodigoPorHora() {
+        return lineasDeCodigoPorHora;
+    }
+
+    public void setLineasDeCodigoPorHora(int lineasDeCodigoPorHora) {
+        this.lineasDeCodigoPorHora = lineasDeCodigoPorHora;
+    }
+
+    public String getLenguajeDominante() {
+        return lenguajeDominante;
+    }
+
+    public void setLenguajeDominante(String lenguajeDominante) {
+        this.lenguajeDominante = lenguajeDominante;
+    }
+
+    public double calculaSalario() {
+        return 10 * lineasDeCodigoPorHora;
+    }
+}
+public class Prueba {
+    public static void main(String[] args) {
+
+        System.out.println("Nombre: " + programador.getNombre());
+        System.out.println("DNI: " + programador.getDni());
+        System.out.println("Edad: " + programador.getEdad());
+        System.out.println("Casado: " + programador.isCasado());
+        System.out.println("Salario: " + programador.getSalario());
+        System.out.println("Lineas de Código por Hora: " + programador.getLineasDeCodigoPorHora());
+        System.out.println("Lenguaje Dominante: " + programador.getLenguajeDominante());
+        System.out.println("Salario del Programador: " + programador.calculaSalario());
+    }
+}
